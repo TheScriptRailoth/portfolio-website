@@ -508,13 +508,23 @@ function Navbar({ isMenuOpen, setIsMenuOpen }: { isMenuOpen: boolean; setIsMenuO
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.a
+          {/* <motion.a
             href="#"
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
           >
-            AM
-          </motion.a>
+            The Script Railoth
+          </motion.a> */}
+
+            <motion.a
+              href="#"
+              whileHover={{ scale: 1.05 }}
+              className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent font-[cursive]"
+            >
+              TheScriptRailoth
+            </motion.a>
+
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

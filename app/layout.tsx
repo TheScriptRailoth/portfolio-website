@@ -18,10 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-       <head>
+      <head>
         <link rel="icon" href="/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+      </body>
     </html>
   )
 }

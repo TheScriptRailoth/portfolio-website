@@ -1152,7 +1152,7 @@ export default function Portfolio() {
                 transition={{ duration: 1, delay: 1 }}
                 className="mb-8"
               >
-                <TypewriterText text="From Concepts to Code, One Line at a Time." />
+                <TypewriterText text="Solving Real Problems, One Clean Commit at a Time." />
               </motion.div>
 
               {/* Enhanced Description */}
@@ -1224,19 +1224,19 @@ export default function Portfolio() {
                   gradient="from-cyan-500 to-blue-600"
                 />
                 <StatCard
-                  number="4+"
+                  number="2+"
                   label="Years Experience"
                   icon={<Code className="w-7 h-7" />}
                   gradient="from-purple-500 to-pink-600"
                 />
                 <StatCard
                   number="2"
-                  label="Hackathon Wins"
+                  label="National Level Hackathon Wins"
                   icon={<Award className="w-7 h-7" />}
                   gradient="from-green-500 to-emerald-600"
                 />
                 <StatCard
-                  number="10+"
+                  number="15+"
                   label="Projects Built"
                   icon={<Rocket className="w-7 h-7" />}
                   gradient="from-orange-500 to-red-600"

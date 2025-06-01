@@ -235,10 +235,11 @@ export default function BlogsPage() {
                         </div>
                         <Badge className="bg-purple-900/50 text-purple-300 text-xs">{blog.category}</Badge>
                       </div>
-
+                      <a href={blog.link} target="_blank" rel="noopener noreferrer" className="block mb-3">
                       <h3 className="text-xl font-bold text-cyan-400 mb-3 group-hover:text-cyan-300 transition-colors">
                         {blog.title}
                       </h3>
+                      </a>
 
                       <p className="text-gray-300 mb-4 line-clamp-3">{blog.excerpt}</p>
 
@@ -272,8 +273,10 @@ export default function BlogsPage() {
               All Posts ({filteredBlogs.length})
             </motion.h2>
 
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularBlogs.map((blog, index) => (
+                <a href={blog.link} target="_blank" rel="noopener noreferrer">
                 <motion.article
                   key={blog.id}
                   initial={{ opacity: 0, y: 50 }}
@@ -323,6 +326,7 @@ export default function BlogsPage() {
                     </div>
                   </div>
                 </motion.article>
+                </a>
               ))}
             </div>
 

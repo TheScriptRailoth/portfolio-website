@@ -1155,19 +1155,12 @@ export default function Portfolio() {
                 <TypewriterText text="Solving Real Problems, One Clean Commit at a Time." />
               </motion.div>
 
-              {/* Enhanced Description */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.5 }}
                 className="mb-12 max-w-4xl mx-auto"
               >
-                {/* <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
-                  Computer Science Engineer (B.Tech, JUET) specializing in{" "}
-                  <span className="text-cyan-400 font-semibold">AI/ML integration</span>,{" "}
-                  <span className="text-purple-400 font-semibold">Android development</span>, and{" "}
-                  <span className="text-pink-400 font-semibold">innovative system solutions</span>
-                </p> */}
                 <p className="text-base md:text-lg text-gray-300 leading-relaxed mb-6">
                   Computer Science Engineer passionate about{" "}
                   <span className="text-purple-400 font-semibold">Android and cross-platform development</span>,{" "}
@@ -1177,7 +1170,6 @@ export default function Portfolio() {
 
               </motion.div>
 
-              {/* Enhanced Action Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1199,7 +1191,7 @@ export default function Portfolio() {
                 </GlowButton>
                 
 
-                <GlowButton href="https://drive.usercontent.google.com/u/1/uc?id=1D-R2-q_8VKb8GuLYjsqyS4c6Pf5-nRkx&export=download" 
+                <GlowButton href="https://drive.usercontent.google.com/u/0/uc?id=1ttcvl-6N9CIV7sPJPys7cD11KvVcrnCb&export=download" 
                   icon={<Download />} 
                   
                   variant="accent">

@@ -33,14 +33,15 @@ import {
   TwitterIcon,
   XIcon,
   Twitter,
+  Contact,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { SiHashnode } from 'react-icons/si';
 import { SiMedium } from "react-icons/si"
 import { SiGooglescholar } from "react-icons/si"
+import ContactForm from './form/contact-form';
 
-// Loading Animation Component
 function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0)
   const [currentLine, setCurrentLine] = useState(0)
@@ -1152,7 +1153,7 @@ export default function Portfolio() {
                 transition={{ duration: 1, delay: 1 }}
                 className="mb-8"
               >
-                <TypewriterText text="Solving Real Problems, One Clean Commit at a Time." />
+                <TypewriterText text="Turning Ideas into Impact, One Clean Commit at a Time." />
               </motion.div>
 
               <motion.div
@@ -1191,8 +1192,8 @@ export default function Portfolio() {
                 </GlowButton>
                 
 
-                <GlowButton href="https://drive.usercontent.google.com/u/0/uc?id=1ttcvl-6N9CIV7sPJPys7cD11KvVcrnCb&export=download" 
-                  icon={<Download />} 
+                <GlowButton href="https://drive.google.com/file/d/19u73VeQF2o5-T8mA6kD6mwB3n_k086qm/view?usp=drive_link" 
+                  icon={<ExternalLink/>} 
                   
                   variant="accent">
                   Resume
@@ -1228,7 +1229,7 @@ export default function Portfolio() {
                   gradient="from-green-500 to-emerald-600"
                 />
                 <StatCard
-                  number="15+"
+                  number="20+"
                   label="Projects Built"
                   icon={<Rocket className="w-7 h-7" />}
                   gradient="from-orange-500 to-red-600"
@@ -1255,11 +1256,7 @@ export default function Portfolio() {
                 <div className="max-w-4xl mx-auto">
                   <GlassCard>
                     <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                      I'm a passionate Computer Science Engineer with a proven track record of building intelligent
-                      applications and innovative system integrations. My expertise spans across mobile
-                      development and real-world engineering tools. As a winner of the national XR Creator Hackathon
-                      and AR innovation specialist, I transform complex ideas into user-friendly, intelligent systems
-                      that make a real impact.
+                      I’m Ashutosh Mishra — a Computer Science graduate, 4-time intern, patent-holder, and product-driven developer who builds tech that actually ships. From integrating AI into Android keyboards for 600,000+ users to simulating power cycles that reduce real-world plant costs, I don’t just write code — I solve problems. I've won national hackathons, built 20+ full-stack apps, filed two patents, and even showcased my work to the Prime Minister of India. I bring execution, impact, and obsession with craft to every line of code I write.
                     </p>
                   </GlassCard>
                 </div>
@@ -1638,7 +1635,7 @@ export default function Portfolio() {
                   viewport={{ once: true }}
                 >
                   <GlassCard>
-                    <form className="space-y-6">
+                    {/* <form className="space-y-6">
                       <div>
                         <input
                           type="text"
@@ -1668,7 +1665,12 @@ export default function Portfolio() {
                       >
                         Send Message
                       </motion.button>
-                    </form>
+                    </form> */}
+
+                    
+                    <ContactForm />                    
+
+                    
 
                     <div className="flex justify-center space-x-6 mt-8">
 

@@ -34,6 +34,7 @@ import {
   XIcon,
   Twitter,
   Contact,
+  FileText,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -241,6 +242,7 @@ function Terminal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void })
       "Ashutosh Mishra - Computer Science Engineer",
       "Specializing in AI/ML, Android development, and system solutions",
       "Winner of XR Creator Hackathon 2025",
+      "Patent-holder with 3+ patents filed",
       "Passionate about turning ideas into intelligent systems",
     ],
     skills: () => [
@@ -907,7 +909,7 @@ export default function Portfolio() {
       link: "https://thescriptrailoth.hashnode.dev/building-cicd-pipelines-on-github-actions-a-step-by-step-guide",
     },
     {
-      title: "Building and Publishing Your First Flutter Package: A Beginner’s Guide",
+      title: "Building and Publishing Your First Flutter Package: A Beginner's Guide",
       excerpt:
         "Getting Started with Your Flutter Package Journey: A Comprehensive Guide for Novice Users",
       date: "2024-02-05",
@@ -1208,31 +1210,37 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 2.5 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6 max-w-7xl mx-auto"
               >
                 <StatCard
                   number="600K+"
                   label="Users Served"
-                  icon={<Users className="w-7 h-7" />}
+                  icon={<Users className="w-6 h-6 md:w-7 md:h-7" />}
                   gradient="from-cyan-500 to-blue-600"
                 />
                 <StatCard
                   number="2+"
                   label="Years Experience"
-                  icon={<Code className="w-7 h-7" />}
+                  icon={<Code className="w-6 h-6 md:w-7 md:h-7" />}
                   gradient="from-purple-500 to-pink-600"
                 />
                 <StatCard
                   number="2"
                   label="National Level Hackathon Wins"
-                  icon={<Award className="w-7 h-7" />}
+                  icon={<Award className="w-6 h-6 md:w-7 md:h-7" />}
                   gradient="from-green-500 to-emerald-600"
                 />
                 <StatCard
                   number="20+"
                   label="Projects Built"
-                  icon={<Rocket className="w-7 h-7" />}
+                  icon={<Rocket className="w-6 h-6 md:w-7 md:h-7" />}
                   gradient="from-orange-500 to-red-600"
+                />
+                <StatCard
+                  number="3+"
+                  label="Patents Filed"
+                  icon={<FileText className="w-6 h-6 md:w-7 md:h-7" />}
+                  gradient="from-indigo-500 to-purple-600"
                 />
               </motion.div>
             </div>
@@ -1256,7 +1264,7 @@ export default function Portfolio() {
                 <div className="max-w-4xl mx-auto">
                   <GlassCard>
                     <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-                      I’m Ashutosh Mishra — a Computer Science graduate, 4-time intern, patent-holder, and product-driven developer who builds tech that actually ships. From integrating AI into Android keyboards for 600,000+ users to simulating power cycles that reduce real-world plant costs, I don’t just write code — I solve problems. I've won national hackathons, built 20+ full-stack apps, filed two patents, and even showcased my work to the Prime Minister of India. I bring execution, impact, and obsession with craft to every line of code I write.
+                      I'm Ashutosh Mishra — a Computer Science graduate, 4-time intern, patent-holder, and product-driven developer who builds tech that actually ships. From integrating AI into Android keyboards for 600,000+ users to simulating power cycles that reduce real-world plant costs, I don't just write code — I solve problems. I've won national hackathons, built 20+ full-stack apps, filed three patents, and even showcased my work to the Prime Minister of India. I bring execution, impact, and obsession with craft to every line of code I write.
                     </p>
                   </GlassCard>
                 </div>
@@ -1670,93 +1678,85 @@ export default function Portfolio() {
                     
                     <ContactForm />                    
 
-                    
+                    {/* Social Media Icons */}
+                    <div className="mt-8">
+                      <h3 className="text-lg font-semibold text-cyan-400 mb-4 text-center">Connect With Me</h3>
+                      <div className="grid grid-cols-4 md:grid-cols-7 gap-3 md:gap-4 max-w-md mx-auto">
+                        <motion.a
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          whileTap={{ scale: 0.9 }}
+                          href="https://x.com/ScriptRailoth"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center p-3 md:p-4 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 border border-cyan-400/30 rounded-xl hover:border-cyan-400/60 hover:bg-cyan-500/20 transition-all duration-300 cursor-pointer group"
+                        >
+                          <Twitter className="w-5 h-5 md:w-6 md:h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                        </motion.a>
 
-                    <div className="flex justify-center space-x-6 mt-8">
+                        <motion.a
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          whileTap={{ scale: 0.9 }}
+                          href="https://www.github.com/TheScriptRailoth"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center p-3 md:p-4 bg-gradient-to-br from-gray-500/10 to-gray-600/10 border border-gray-400/30 rounded-xl hover:border-gray-400/60 hover:bg-gray-500/20 transition-all duration-300 cursor-pointer group"
+                        >
+                          <Github className="w-5 h-5 md:w-6 md:h-6 text-gray-400 group-hover:text-gray-300 transition-colors" />
+                        </motion.a>
 
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        href="https://x.com/ScriptRailoth"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <Twitter size={24} />
-                      </motion.a>
+                        <motion.a
+                          whileHover={{ scale: 1.2, rotate: -5 }}
+                          whileTap={{ scale: 0.9 }}
+                          href="https://www.linkedin.com/in/thescriptrailoth"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center p-3 md:p-4 bg-gradient-to-br from-blue-500/10 to-blue-600/10 border border-blue-400/30 rounded-xl hover:border-blue-400/60 hover:bg-blue-500/20 transition-all duration-300 cursor-pointer group"
+                        >
+                          <Linkedin className="w-5 h-5 md:w-6 md:h-6 text-blue-400 group-hover:text-blue-300 transition-colors" />
+                        </motion.a>
 
+                        <motion.a
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          whileTap={{ scale: 0.9 }}
+                          href="mailto:am3718440@gmail.com"
+                          className="flex items-center justify-center p-3 md:p-4 bg-gradient-to-br from-red-500/10 to-red-600/10 border border-red-400/30 rounded-xl hover:border-red-400/60 hover:bg-red-500/20 transition-all duration-300 cursor-pointer group"
+                        >
+                          <Mail className="w-5 h-5 md:w-6 md:h-6 text-red-400 group-hover:text-red-300 transition-colors" />
+                        </motion.a>
 
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        href="https://www.github.com/TheScriptRailoth"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <Github size={24} />
-                      </motion.a>
+                        <motion.a
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          whileTap={{ scale: 0.9 }}
+                          href="https://www.instagram.com/__ashutosh.mishra_/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center p-3 md:p-4 bg-gradient-to-br from-pink-500/10 to-purple-600/10 border border-pink-400/30 rounded-xl hover:border-pink-400/60 hover:bg-pink-500/20 transition-all duration-300 cursor-pointer group"
+                        >
+                          <Instagram className="w-5 h-5 md:w-6 md:h-6 text-pink-400 group-hover:text-pink-300 transition-colors" />
+                        </motion.a>
 
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: -5 }}
-                        href="https://www.linkedin.com/in/thescriptrailoth"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <Linkedin size={24} />
-                      </motion.a>
+                        <motion.a
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          whileTap={{ scale: 0.9 }}
+                          href="https://thescriptrailoth.hashnode.dev/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center p-3 md:p-4 bg-gradient-to-br from-purple-500/10 to-purple-600/10 border border-purple-400/30 rounded-xl hover:border-purple-400/60 hover:bg-purple-500/20 transition-all duration-300 cursor-pointer group"
+                        >
+                          <SiHashnode className="w-5 h-5 md:w-6 md:h-6 text-purple-400 group-hover:text-purple-300 transition-colors" />
+                        </motion.a>
 
-
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        href="mailto:am3718440@gmail.com"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <Mail size={24} />
-                      </motion.a>
-
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        href="https://www.instagram.com/__ashutosh.mishra_/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <Instagram size={24} />
-                      </motion.a>
-
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        href="https://thescriptrailoth.hashnode.dev/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <SiHashnode size={24} />
-                      </motion.a>
-
-
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        href="https://medium.com/@am3718440"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <SiMedium size={24} />
-                      </motion.a>
-
-                      <motion.a
-                        whileHover={{ scale: 1.2, rotate: 5 }}
-                        href="https://medium.com/@am3718440"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer"
-                      >
-                        <SiGooglescholar size={24} />
-                      </motion.a>
-
-
-
+                        <motion.a
+                          whileHover={{ scale: 1.2, rotate: 5 }}
+                          whileTap={{ scale: 0.9 }}
+                          href="https://medium.com/@am3718440"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center p-3 md:p-4 bg-gradient-to-br from-green-500/10 to-green-600/10 border border-green-400/30 rounded-xl hover:border-green-400/60 hover:bg-green-500/20 transition-all duration-300 cursor-pointer group"
+                        >
+                          <SiMedium className="w-5 h-5 md:w-6 md:h-6 text-green-400 group-hover:text-green-300 transition-colors" />
+                        </motion.a>
+                      </div>
                     </div>
                   </GlassCard>
                 </motion.div>
@@ -1859,13 +1859,13 @@ function StatCard({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
       whileHover={{
-        scale: 1.08,
+        scale: 1.05,
         y: -8,
-        boxShadow: "0 20px 40px rgba(6, 182, 212, 0.3)",
+        boxShadow: "0 20px 40px rgba(6, 182, 212, 0.4)",
       }}
-      className="group relative overflow-hidden"
+      className="group relative overflow-hidden cursor-pointer"
     >
-      <div className="relative p-6 md:p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl hover:border-cyan-400/50 transition-all duration-500">
+      <div className="relative p-4 md:p-6 lg:p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl hover:border-cyan-400/50 transition-all duration-500 h-full">
         {/* Background Gradient */}
         <div
           className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-2xl`}
@@ -1877,7 +1877,7 @@ function StatCard({
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
           whileHover={{ rotate: 360, scale: 1.2 }}
-          className="relative z-10 flex items-center justify-center mb-4 w-16 h-16 mx-auto bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-full border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300"
+          className="relative z-10 flex items-center justify-center mb-3 md:mb-4 w-12 h-12 md:w-16 md:h-16 mx-auto bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-full border border-cyan-400/30 group-hover:border-cyan-400/60 transition-all duration-300"
         >
           <div className="text-cyan-400 group-hover:text-white transition-colors duration-300">{icon}</div>
         </motion.div>
@@ -1887,7 +1887,7 @@ function StatCard({
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4, type: "spring" }}
-          className="relative z-10 text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300"
+          className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-2 md:mb-3 text-center group-hover:scale-110 transition-transform duration-300"
         >
           {number}
         </motion.div>
@@ -1897,7 +1897,7 @@ function StatCard({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="relative z-10 text-gray-400 group-hover:text-gray-300 text-sm md:text-base font-medium uppercase tracking-wider transition-colors duration-300"
+          className="relative z-10 text-gray-400 group-hover:text-gray-300 text-xs md:text-sm font-medium uppercase tracking-wider transition-colors duration-300 text-center leading-tight min-h-[2.5rem] md:min-h-[3rem] flex items-center justify-center"
         >
           {label}
         </motion.p>
@@ -1939,6 +1939,13 @@ function StatCard({
             />
           ))}
         </div>
+
+        {/* Hover Glow Effect */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileHover={{ opacity: 1 }}
+          className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        />
       </div>
     </motion.div>
   )
